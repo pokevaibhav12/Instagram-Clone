@@ -1,9 +1,11 @@
 package com.example.demo.repository;
 
 import com.example.demo.entity.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UsersRepository extends CrudRepository<Users,Integer > {
-    Users saveUser(Users user);
-    Users findByUserId(String userId);
+@Repository
+public interface UsersRepository extends JpaRepository<Users,Integer > {
+
 }
